@@ -10,7 +10,7 @@
           <div class="card-body">
             <div id="div-image-result" class="row justify-content-center">
                 <div class="col-sm-8">
-                  <img src="@if($img == 1){{asset('img/ganhamo.PNG')}}@else{{asset('img/perdemo.jpeg')}}@endif" alt="..." style="width: 250px;">
+                  <img src="@if($img == 1){{secure_asset('img/ganhamo.PNG')}}@else{{secure_asset('img/perdemo.jpeg')}}@endif" alt="..." style="width: 250px;">
                 </div>
             </div>
             <h5 class="card-title">{{$msg_1}}</h5>
