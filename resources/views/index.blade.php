@@ -3,7 +3,7 @@
 @section('content')
 
     <nav id="navbar" class="navbar navbar-dark fixed-top">
-        <a class="navbar-brand mx-auto" href="#"><img src="img/ufape.png" alt="" ></a>
+        <a class="navbar-brand mx-auto" href="#"><img src="{{asset('img/ufape.png')}}" alt="" ></a>
         <a class="btn btn-outline-light btn-lg" onclick="enableMute()" target="_blank">Som</a>
     </nav>
 
@@ -11,7 +11,7 @@
         <div class="video-wrap">
             <div id="video">
                 <video id="bgivd" autoplay loop muted playsinline>
-                    <source src="video/mar.mp4" type="video/mp4">
+                    <source src="{{asset('video/mar.mp4')}}" type="video/mp4">
                 </video>
             </div>
         </div>
