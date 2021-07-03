@@ -18,7 +18,7 @@
     <div class="img-background">
         <div class="img-wrap">
             <div id="img">
-                <img src={{asset('img/battle2.jpg')}} alt="battle">
+                <img src={{secure_asset('img/battle2.jpg')}} alt="battle">
             </div>
         </div>
     </div>
@@ -52,7 +52,7 @@
     </div>
 
     <audio id="background-sound" controls loop muted autoplay hidden>
-        <source src="{{asset('audio/suspense02.mp3')}}" type="audio/mpeg">
+        <source src="{{secure_asset('audio/suspense02.mp3')}}" type="audio/mpeg">
     </audio>
 
     <button onclick="enableMute()" class="button">Som</button>
@@ -111,32 +111,32 @@
         var images = {};
 
         var naviosSources = {//source de onde fica os navios
-            navio1: '{{asset('img/navios/portaaviao.png')}}',
-            navio2: '{{asset('img/navios/guerra.png')}}',
-            navio3: '{{asset('img/navios/encouracado.png')}}',
-            navio4: '{{asset('img/navios/encouracado.png')}}',
-            navio5: '{{asset('img/navios/submarino.png')}}',
+            navio1: '{{secure_asset('img/navios/portaaviao.png')}}',
+            navio2: '{{secure_asset('img/navios/guerra.png')}}',
+            navio3: '{{secure_asset('img/navios/encouracado.png')}}',
+            navio4: '{{secure_asset('img/navios/encouracado.png')}}',
+            navio5: '{{secure_asset('img/navios/submarino.png')}}',
         };
 
         var sonsEspeciais = {
             somAgua: new Howl({
                 src: [
-                    '{{asset('audio/agua.mp3')}}',
+                    '{{secure_asset('audio/agua.mp3')}}',
                 ]
             }),
             somAguaCOM: new Howl({
                 src: [
-                    '{{asset('audio/agua.mp3')}}',
+                    '{{secure_asset('audio/agua.mp3')}}',
                 ]
             }),
             somBomba: new Howl({
                 src: [
-                    '{{asset('audio/bomba.mp3')}}',
+                    '{{secure_asset('audio/bomba.mp3')}}',
                 ]
             }),
             somBombardeio: new Howl({
                 src: [
-                    '{{asset('audio/bombardeio.mp3')}}',
+                    '{{secure_asset('audio/bombardeio.mp3')}}',
                 ]
             }),
         }
@@ -235,7 +235,7 @@
                 });
                 casaLayer.add(bordaTabuleiro);
             }
-            images['borda_tabuleiro'].src = '{{asset('img/borda_tabuleiro.png')}}';
+            images['borda_tabuleiro'].src = '{{secure_asset('img/borda_tabuleiro.png')}}';
         };
 
         function atualizarTabuleiro(posicaoX){
@@ -566,14 +566,14 @@
         };
 
       var casasSources = {
-          cell_board_mouseover: '{{asset('img/cell_board_mouseover.png')}}',
-          cell_board_bomb: '{{asset('img/cell_board_bomb.png')}}',
-          cell_board_water: '{{asset('img/cell_board_water.png')}}',
+          cell_board_mouseover: '{{secure_asset('img/cell_board_mouseover.png')}}',
+          cell_board_bomb: '{{secure_asset('img/cell_board_bomb.png')}}',
+          cell_board_water: '{{secure_asset('img/cell_board_water.png')}}',
       };
 
         for(let i = 1; i <= tamanhoTabuleiro; i++){//cria um source pra cada casa e coloca em sources
             for(let j = 1; j <= tamanhoTabuleiro; j++){
-                casasSources['casa'+i+'x'+j] = '{{asset('img/cell_board.png')}}';
+                casasSources['casa'+i+'x'+j] = '{{secure_asset('img/cell_board.png')}}';
             }
         };
 

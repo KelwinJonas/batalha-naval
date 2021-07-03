@@ -5,7 +5,7 @@
     <div class="img-background">
         <div class="img-wrap">
             <div id="img">
-                <img src={{asset('img/battle2.jpg')}} alt="battle">
+                <img src={{secure_asset('img/battle2.jpg')}} alt="battle">
             </div>
         </div>
     </div>
@@ -60,7 +60,7 @@
     </form>
 
     <audio id="background-sound" controls loop muted autoplay hidden>
-        <source src="{{asset('audio/suspense.mp3')}}" type="audio/mpeg">
+        <source src="{{secure_asset('audio/suspense.mp3')}}" type="audio/mpeg">
     </audio>
 
     <script>
@@ -76,8 +76,8 @@
       const anguloDeRotacao = 270; //rotacao de click no navio
       const quantidadeNavios = 5;
 
-      var somPop = new loadSound('{{asset('audio/pop.mp3')}}');
-      var somPopPlace = new loadSound('{{asset('audio/pop.mp3')}}');
+      var somPop = new loadSound('{{secure_asset('audio/pop.mp3')}}');
+      var somPopPlace = new loadSound('{{secure_asset('audio/pop.mp3')}}');
 
       var stage = new Konva.Stage({//stage padrao pra jogar os elementos na tela
         container: 'container',
@@ -436,23 +436,23 @@
       }
 
       var naviosSources = {//source de onde fica os navios
-        navio1: '{{asset('img/navios/portaaviao.png')}}',
-        navio2: '{{asset('img/navios/guerra.png')}}',
-        navio3: '{{asset('img/navios/encouracado.png')}}',
-        navio4: '{{asset('img/navios/encouracado.png')}}',
-        navio5: '{{asset('img/navios/submarino.png')}}',
-        navio1glow: '{{asset('img/navios/portaaviaoglow.png')}}',
-        navio2glow: '{{asset('img/navios/guerraglow.png')}}',
-        navio3glow: '{{asset('img/navios/encouracadoglow.png')}}',
-        navio4glow: '{{asset('img/navios/encouracadoglow.png')}}',
-        navio5glow: '{{asset('img/navios/submarinoglow.png')}}',
+        navio1: '{{secure_asset('img/navios/portaaviao.png')}}',
+        navio2: '{{secure_asset('img/navios/guerra.png')}}',
+        navio3: '{{secure_asset('img/navios/encouracado.png')}}',
+        navio4: '{{secure_asset('img/navios/encouracado.png')}}',
+        navio5: '{{secure_asset('img/navios/submarino.png')}}',
+        navio1glow: '{{secure_asset('img/navios/portaaviaoglow.png')}}',
+        navio2glow: '{{secure_asset('img/navios/guerraglow.png')}}',
+        navio3glow: '{{secure_asset('img/navios/encouracadoglow.png')}}',
+        navio4glow: '{{secure_asset('img/navios/encouracadoglow.png')}}',
+        navio5glow: '{{secure_asset('img/navios/submarinoglow.png')}}',
       };
 
       var casasSources = {};
 
       for(let i = 1; i <= tamanhoTabuleiro; i++){//cria um source pra cada casa e coloca em sources
           for(let j = 1; j <= tamanhoTabuleiro; j++){
-            casasSources['casa'+i+'x'+j] = '{{asset('img/cell_board.png')}}';
+            casasSources['casa'+i+'x'+j] = '{{secure_asset('img/cell_board.png')}}';
           }
       };
 

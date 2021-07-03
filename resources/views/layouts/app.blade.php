@@ -7,15 +7,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Batalha Naval</title>
-        <link rel="icon" type="image/png" href="{{asset('img/icon-app.png')}}">
-        <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <link rel="icon" type="image/png" href="{{secure_asset('img/icon-app.png')}}">
+        <link rel="stylesheet" href="{{secure_asset('css/app.css')}}">
     </head>
 <body>
 
     @yield('content')
 
     <audio id="background-sound" controls loop muted autoplay hidden>
-        <source src="{{asset('audio/mar.mp3')}}" type="audio/mpeg">
+        <source src="{{secure_asset('audio/mar.mp3')}}" type="audio/mpeg">
     </audio>
 
     <script>

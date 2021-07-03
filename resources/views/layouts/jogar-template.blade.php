@@ -7,8 +7,8 @@
         <meta charset="utf-8" />
 
         <title>Batalha Naval - JOGAR</title>
-        <link rel="icon" type="image/png" href="{{asset('img/icon-app.png')}}">
-        <link rel="stylesheet" href="{{asset('css/jogar.css')}}">
+        <link rel="icon" type="image/png" href="{{secure_asset('img/icon-app.png')}}">
+        <link rel="stylesheet" href="{{secure_asset('css/jogar.css')}}">
     </head>
     <body>
         @yield('content')
